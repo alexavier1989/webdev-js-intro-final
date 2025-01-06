@@ -18,6 +18,43 @@ body {
     margin: auto;
     width: 90dvw;
     max-width: 400px;
+    position: relative;
+}
+
+.game-won::after {
+    content: "🥳";
+    position: absolute;
+    top: -50px;
+    right: -40px;
+    font-size: 6rem;
+    animation: show 2s ease-in , rotate 2s infinite 3s;
+}
+
+.game-over::after {
+    content: "🤔";
+    position: absolute;
+    top: -50px;
+    right: -40px;
+    font-size: 6rem;
+    animation: show 1s ease-in , rotate 2s infinite 3s;
+}
+
+@keyframes show {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
 }
 
 .game-title {
